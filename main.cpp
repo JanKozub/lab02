@@ -1,6 +1,10 @@
 #include <iostream>
 #include "Member.h"
 #include "Library.h"
+#include "iostream"
+#include "string"
+
+using namespace std;
 
 int main() {
     std::cout << "Hello, World!" << std::endl;
@@ -10,11 +14,48 @@ int main() {
 
     Library library;
 
-    Book b1("b1", "a1", "1");
-    Book b2("b2", "a2", "2");
-    Book b3("b3", "a3", "3");
-    Book b4("b4", "a4", "4");
-    Book b5("b5", "a5", "5");
+    std::string s1, s2, s3, s4, s5, s6, s7, s8, s9, s10, s11, s12, s13, s14, s15;
+
+    printf("Podaj tytul 1 ksiazki:");
+    getline(cin, s1);
+    printf("Podaj autora  ksiazki:");
+    getline(cin, s2);
+    printf("Podaj isbn 1 ksiazki:");
+    getline(cin, s3);
+
+    printf("Podaj tytul 2 ksiazki:");
+    getline(cin, s4);
+    printf("Podaj autora 2 ksiazki:");
+    getline(cin, s5);
+    printf("Podaj isbn 2 ksiazki:");
+    getline(cin, s6);
+
+    printf("Podaj tytul 3 ksiazki:");
+    getline(cin, s7);
+    printf("Podaj autora 3 ksiazki:");
+    getline(cin, s8);
+    printf("Podaj isbn 3 ksiazki:");
+    getline(cin, s9);
+
+    printf("Podaj tytul 4 ksiazki:");
+    getline(cin, s10);
+    printf("Podaj autora 4 ksiazki:");
+    getline(cin, s11);
+    printf("Podaj isbn 4 ksiazki:");
+    getline(cin, s12);
+
+    printf("Podaj tytul 5 ksiazki:");
+    getline(cin, s13);
+    printf("Podaj autora 5 ksiazki:");
+    getline(cin, s14);
+    printf("Podaj isbn 5 ksiazki:");
+    getline(cin, s15);
+
+    Book b1(s1, s2, s3);
+    Book b2(s4, s5, s6);
+    Book b3(s7, s8, s9);
+    Book b4(s10, s11, s12);
+    Book b5(s13, s14, s15);
 
     library.addBook(b1);
     library.addBook(b2);
@@ -29,21 +70,21 @@ int main() {
 
     library.displayBooks();
 
-    library.borrowBook(m1, "1");
-    library.borrowBook(m1, "3");
+    library.borrowBook(m1, s6);
+    library.borrowBook(m1, s13);
 
     library.displayBooks();
 
     printf("%d\n", m1.getBooksBorrowed());
 
-    library.borrowBook(m1, "1");
+    library.borrowBook(m1, s3);
 
     library.displayBooks();
 
     printf("%d\n", m1.getBooksBorrowed());
 
-    library.returnBook(m1, "1");
-    library.returnBook(m1, "5");
+    library.returnBook(m1, s3);
+    library.returnBook(m1, s15);
 
     library.displayBooks();
 
