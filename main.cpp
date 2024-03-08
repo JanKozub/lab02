@@ -1,13 +1,10 @@
 #include <iostream>
 #include "Member.h"
 #include "Library.h"
-#include "iostream"
 
 using namespace std;
 
 int main() {
-    std::cout << "Hello, World!" << std::endl;
-
     Member m1("marek");
     Member m2("tomek");
 
@@ -21,7 +18,7 @@ int main() {
 
     printf("Podaj tytul 1 ksiazki:");
     getline(cin, t1);
-    printf("Podaj autora  ksiazki:");
+    printf("Podaj autora 1 ksiazki:");
     getline(cin, a1);
     printf("Podaj isbn 1 ksiazki:");
     getline(cin, i1);
