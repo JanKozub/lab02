@@ -2,7 +2,6 @@
 #include "Member.h"
 #include "Library.h"
 #include "iostream"
-#include "string"
 
 using namespace std;
 
@@ -14,48 +13,52 @@ int main() {
 
     Library library;
 
-    std::string s1, s2, s3, s4, s5, s6, s7, s8, s9, s10, s11, s12, s13, s14, s15;
+    std::string t1 = "t1", a1 = "a1", i1 = "1";
+    std::string t2 = "t2", a2 = "a2", i2 = "2";
+    std::string t3 = "t3", a3 = "a3", i3 = "3";
+    std::string t4 = "t4", a4 = "a4", i4 = "4";
+    std::string t5 = "t5", a5 = "a5", i5 = "5";
 
     printf("Podaj tytul 1 ksiazki:");
-    getline(cin, s1);
+    getline(cin, t1);
     printf("Podaj autora  ksiazki:");
-    getline(cin, s2);
+    getline(cin, a1);
     printf("Podaj isbn 1 ksiazki:");
-    getline(cin, s3);
+    getline(cin, i1);
 
     printf("Podaj tytul 2 ksiazki:");
-    getline(cin, s4);
+    getline(cin, t2);
     printf("Podaj autora 2 ksiazki:");
-    getline(cin, s5);
+    getline(cin, a2);
     printf("Podaj isbn 2 ksiazki:");
-    getline(cin, s6);
+    getline(cin, i2);
 
     printf("Podaj tytul 3 ksiazki:");
-    getline(cin, s7);
+    getline(cin, t3);
     printf("Podaj autora 3 ksiazki:");
-    getline(cin, s8);
+    getline(cin, a3);
     printf("Podaj isbn 3 ksiazki:");
-    getline(cin, s9);
+    getline(cin, i3);
 
     printf("Podaj tytul 4 ksiazki:");
-    getline(cin, s10);
+    getline(cin, t4);
     printf("Podaj autora 4 ksiazki:");
-    getline(cin, s11);
+    getline(cin, a4);
     printf("Podaj isbn 4 ksiazki:");
-    getline(cin, s12);
+    getline(cin, i4);
 
     printf("Podaj tytul 5 ksiazki:");
-    getline(cin, s13);
+    getline(cin, t5);
     printf("Podaj autora 5 ksiazki:");
-    getline(cin, s14);
+    getline(cin, a5);
     printf("Podaj isbn 5 ksiazki:");
-    getline(cin, s15);
+    getline(cin, i5);
 
-    Book b1(s1, s2, s3);
-    Book b2(s4, s5, s6);
-    Book b3(s7, s8, s9);
-    Book b4(s10, s11, s12);
-    Book b5(s13, s14, s15);
+    Book b1(t1, a1, i1);
+    Book b2(t2, a2, i2);
+    Book b3(t3, a3, i3);
+    Book b4(t4, a4, i4);
+    Book b5(t5, a5, i5);
 
     library.addBook(b1);
     library.addBook(b2);
@@ -70,21 +73,21 @@ int main() {
 
     library.displayBooks();
 
-    library.borrowBook(m1, s6);
-    library.borrowBook(m1, s13);
+    library.borrowBook(m1, i1);
+    library.borrowBook(m1, i3);
 
     library.displayBooks();
 
     printf("%d\n", m1.getBooksBorrowed());
 
-    library.borrowBook(m1, s3);
+    library.borrowBook(m1, i1);
 
     library.displayBooks();
 
     printf("%d\n", m1.getBooksBorrowed());
 
-    library.returnBook(m1, s3);
-    library.returnBook(m1, s15);
+    library.returnBook(m1, i1);
+    library.returnBook(m1, i5);
 
     library.displayBooks();
 
